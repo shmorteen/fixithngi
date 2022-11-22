@@ -140,7 +140,7 @@ class Home extends React.Component {
                   <input className=' form-control'></input>
                   </div>
                 </div>
-                <div className='row mb-3'>
+                <div className='row mb-5'>
                   <div className='col-md-2 col-sm-12' >
                   <label style={{fontSize:16}}>Website URL</label>
                   </div>
@@ -148,11 +148,11 @@ class Home extends React.Component {
                   <input className=' form-control'></input>
                   </div>
                 </div>
-                <div className='d-none d-md-flex flex-row justify-content-end'>
+                <div className='d-none d-md-flex flex-row justify-content-end mt-2'>
                 <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
                 <button className='btn text-bold mx-1' style={{fontWeight:"bold", fontSize:18,color:"white",backgroundColor: "#233BA9"}}>Save Changes</button>
                 </div>
-                <div className='d-flex d-md-none flex-column align-items-center'>
+                <div className='d-flex d-md-none flex-column align-items-center mt-2'>
                 <button className='btn w-100' style={{fontWeight:"bold", fontSize:18,backgroundColor: "#233BA9", color:"white"}}>Save Changes</button>
                 <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
                 </div>
@@ -166,9 +166,9 @@ class Home extends React.Component {
                   </label>
                   <div className="tabs__content  mb-2" style={{borderTop:"1px solid grey"}}>
                   <div className='d-flex flex-column p-3'>
-              <div className='row'>
+              <div className='row mt-3'>
                 <div className='col-md-2 col-sm-12'>
-                <label for="language" style={{fontSize:14, fontWeight:"bold"}}>Preferred Language</label>
+                <label for="language" style={{fontSize:18, fontWeight:"bold"}}>Preferred Language</label>
                 </div>
                 <div className='col-md-3 col-sm-12'>
                 <select className="form-select" aria-label="Default select example" style={{fontSize:16}}>
@@ -181,7 +181,7 @@ class Home extends React.Component {
               </div>
               <div  className='row mt-3'>
                 <div className='col-md-2 col-sm-12'>
-                  <label  style={{fontSize:14, fontWeight:"bold"}}>Accessibilty</label>
+                  <label  style={{fontSize:18, fontWeight:"bold"}}>Accessibilty</label>
                 </div>
                 <div className='col-md-3 col-sm-12 mb-5'>
                 <label className="main" style={{fontSize: 16}}>
@@ -217,8 +217,8 @@ class Home extends React.Component {
                   </label>
                   <div className="tabs__content mb-2" style={{borderTop:"1px solid grey"}}>
                 <div className='d-flex flex-column p-3'>
-                <div className='d-flex flex-row justify-content-between'>
-                <div className='mt-mb-2 mb-sm-2'>
+                <div className='d-flex flex-row justify-content-between mt-2 mb-2'>
+                <div>
                 <h6  className='text-bold'  style={{fontSize:18}}>Email Notification</h6>
                 <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-5}}>Set which notifications you will like to recieve</p>
                 </div>
