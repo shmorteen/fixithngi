@@ -69,7 +69,7 @@ class Home extends React.Component {
                   <label htmlFor="tab1" className="tabs__label">
                     Accounts
                   </label>
-                  <div className="tabs__content"><div className='d-flex flex-column p-3'>
+                  <div className="tabs__content mb-2" style={{borderTop:"2px solid grey"}}><div className='d-flex flex-column p-3'>
                 <div className='d-md-flex d-none flex-column'>
                   <h6 className='text-bold'  style={{fontSize:18}}>Profile Information</h6>
                   <p className='text-bold' style={{color:"#787A7D", fontSize:14}}>This information will be publicly displayed so be careful what you fill</p>
@@ -164,7 +164,7 @@ class Home extends React.Component {
                   <label htmlFor="tab2" className="tabs__label">
                     Prefrences
                   </label>
-                  <div className="tabs__content">
+                  <div className="tabs__content  mb-2" style={{borderTop:"2px solid grey"}}>
                   <div className='d-flex flex-column p-3'>
               <div className='row'>
                 <div className='col-md-2 col-sm-12'>
@@ -215,7 +215,7 @@ class Home extends React.Component {
                   <label htmlFor="tab3" className="tabs__label">
                     Notifications
                   </label>
-                  <div className="tabs__content">
+                  <div className="tabs__content mb-2" style={{borderTop:"2px solid grey"}}>
                 <div className='d-flex flex-column p-3'>
                 <div className='d-flex flex-row justify-content-between'>
                 <div>
@@ -329,7 +329,7 @@ class Home extends React.Component {
                   <label htmlFor="tab4" className="tabs__label">
                     Privacy & Security
                   </label>
-                  <div className="tabs__content">
+                  <div className="tabs__content  mb-2" style={{borderTop:"2px solid grey"}}>
                   <div className='d-flex flex-column p-3'>
                 <div className='d-flex flex-row justify-content-between mt-md-5 mt-sm-5'>
                 <div>
