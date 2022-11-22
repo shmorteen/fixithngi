@@ -9,12 +9,12 @@ class Home extends React.Component {
   render() {
     return (
       <>
-    <style
-  dangerouslySetInnerHTML={{
-    __html:
-      "\n            .body{\n                margin: 50px;\n                display: flex;\n                flex-direction: row;\n            }\n            .tabs{\n                display: flex;\n                flex-wrap: wrap;\n                max-width: auto;\n\n            }\n            .tabs__label {\n                padding:10px 16px;\n                cursor: pointer;\n            }\n            .tabs__radio {\n                display: none;\n            }\n            .tabs__content {\n                order: 1;\n                width: 100%;\n                display: none;\n            }\n            .tabs__radio:checked+.tabs__label{\n                    color: #233BA9;\n                    border-bottom: 4px solid #233BA9;\n            }\n            .tabs__radio:checked+.tabs__label+.tabs__content {\n                display: initial; \n            }\n        "
-  }}
-/>
+        <style
+          dangerouslySetInnerHTML={{
+            __html:
+              "\n            .body{\n                margin: 50px;\n                display: flex;\n                flex-direction: row;\n            }\n            .tabs{\n                display: flex;\n                flex-wrap: wrap;\n                max-width: auto;\n\n            }\n            .tabs__label {\n                padding:10px 16px;\n                cursor: pointer;\n            }\n            .tabs__radio {\n                display: none;\n            }\n            .tabs__content {\n                order: 1;\n                width: 100%;\n                display: none;\n            }\n            .tabs__radio:checked+.tabs__label{\n                    color: #233BA9;\n                    border-bottom: 4px solid #233BA9;\n            }\n            .tabs__radio:checked+.tabs__label+.tabs__content {\n                display: initial; \n            }\n        "
+          }}
+        />
 
         <style
           dangerouslySetInnerHTML={{
@@ -34,11 +34,11 @@ class Home extends React.Component {
               '\n        .main {\n            display: block;\n            position: relative;\n            padding-left: 45px;\n            margin-bottom: 15px;\n            cursor: pointer;\n            font-size: 20px;\n        }\n          \n        /* Hide the default checkbox */\n        input[type=checkbox] {\n            visibility: hidden;\n        }\n          \n        /* Creating a custom checkbox\n        based on demand */\n        .geekmark {\n            position: absolute;\n            top: 0;\n            left: 0;\n            margin-top: 4px;\n            height: 15px;\n            width: 15px;\n            border-raduis: 50%;\n            border: 1px solid #787A7D;\n            background-color: white;\n        }\n          \n        /* Specify the background color to be\n        shown when hovering over checkbox */\n        .main:hover input ~ .geekmark {\n            border:1px solid #F16F04\n        }\n          \n        /* Specify the background color to be\n        shown when checkbox is active */\n        .main input:active ~ .geekmark {\n            background-color: #F16F04;\n            border: #F16F04\n        }\n          \n        /* Specify the background color to be\n        shown when checkbox is checked */\n        .main input:checked ~ .geekmark {\n            background-color: white;\n        }\n          \n        /* Checkmark to be shown in checkbox */\n        /* It is not be shown when not checked */\n        .geekmark:after {\n            content: "";\n            position: absolute;\n            display: none;\n        }\n          \n        /* Display checkmark when checked */\n        .main input:checked ~ .geekmark:after {\n            display: block;\n        }\n          \n        /* Styling the checkmark using webkit */\n        /* Rotated the rectangle by 45 degree and \n        showing only two border to make it look\n        like a tickmark */\n        .main .geekmark:after {\n            left: 4px;\n            bottom: 4px;\n            width: 4px;\n            height: 7px;\n            border: solid #F16F04;\n            border-width: 0 1px 2px 0;\n            -webkit-transform: rotate(45deg);\n            -ms-transform: rotate(45deg);\n            transform: rotate(45deg);\n        }\n    '
           }}
         />
-        <div className='d-flex flex-row'>
+        <div className='d-flex flex-row' style={{height: "auto"}}>
           <div className='d-md-flex d-none'> 
           <Navbar />
           </div>
-          <div className='vw-100 vh-100'>
+          <div className='vw-100'>
             <div className='d-md-flex d-none flex-row justify-content-end p-3'>
               <div className='d-flex flex-row'>
                 <div className='notificationhd'>

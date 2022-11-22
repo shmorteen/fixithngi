@@ -4,7 +4,7 @@ import "./navstyle.css"
 const Navbar = () => {
     return (
         <>
-        <div className="d-flex flex-column align-items-center shadow-lg" style={{width: 200, height: "auto"}}>
+        <div className="d-flex flex-column align-items-center shadow-lg" style={{width: 200, height: "100%"}}>
             <div className="p-3">
                 <img src="/assets/Frame (1).png" />
             </div>
