@@ -12,9 +12,15 @@ class Home extends React.Component {
  <style
   dangerouslySetInnerHTML={{
     __html:
-      '\n    /* The switch - the box around the slider */\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 34px;\n  height: 20px;\n}\n\n/* Hide default HTML checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\n.slider:before {\n  position: absolute;\n  content: "";\n  height: 12px;\n  width: 12px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\ninput:checked + .slider {\n  background-color: #F16F04;\n}\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px #F16F04;\n}\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(12px);\n  -ms-transform: translateX(12px);\n  transform: translateX(12px);\n}\n\n/* Rounded sliders */\n.slider.round {\n  border-radius: 34px;\n}\n\n.slider.round:before {\n  border-radius: 50%;\n}\n'
+      "\n    .notificationmb {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationmb .badgemb {\n  position: absolute;\n  top: 50px;\n  left: 195px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n  .notificationlg {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationlg .badgelg {\n  position: absolute;\n  top: 45px;\n  left: 70px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n"
   }}
 />
+        <style
+          dangerouslySetInnerHTML={{
+            __html:
+              '\n    /* The switch - the box around the slider */\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 34px;\n  height: 20px;\n}\n\n/* Hide default HTML checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\n.slider:before {\n  position: absolute;\n  content: "";\n  height: 12px;\n  width: 12px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\ninput:checked + .slider {\n  background-color: #F16F04;\n}\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px #F16F04;\n}\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(12px);\n  -ms-transform: translateX(12px);\n  transform: translateX(12px);\n}\n\n/* Rounded sliders */\n.slider.round {\n  border-radius: 34px;\n}\n\n.slider.round:before {\n  border-radius: 50%;\n}\n'
+          }}
+        />
         <style
           dangerouslySetInnerHTML={{
             __html:
@@ -28,7 +34,10 @@ class Home extends React.Component {
           <div className='vw-100'>
             <div className='d-md-flex d-none flex-row justify-content-end p-3'>
               <div className='d-flex flex-row'>
+                <div className='notificationhd'>
                 <img className='mt-2' src='/assets/Vector.png' style={{height:21, width:"auto"}}/>
+                <span class="badgehd"><img src='./assets/Ellipse 100.png' /></span>
+                </div>
                 <img className='mx-2 mt-1' src='/assets/Ellipse 99.png' style={{height:30, width:"auto"}}/>
               </div>
             </div>
@@ -42,21 +51,28 @@ class Home extends React.Component {
             </div>
             <div>
             <Tabs
-              defaultActiveKey="privacy&security"
+              defaultActiveKey="account"
               id="uncontrolled-tab-example"
               className="mb-3 mx-3"
-              style={{ overflowY:"auto", whiteSpace:"nowrap",color:"#787A7D", fontWeight:"bold", textDecoration:"none"}}
+              style={{color:"#787A7D", textDecoration:"none"}}
             >
               <Tab eventKey="account" title="Account">
                <div className='d-flex flex-column p-3'>
                 <div className='d-md-flex d-none flex-column'>
                   <h6 className='text-bold'  style={{fontSize:18}}>Profile Information</h6>
                   <p className='text-bold' style={{color:"#787A7D", fontSize:14}}>This information will be publicly displayed so be careful what you fill</p>
+                  <div className="notificationlg">
                   <img src="/assets/Ellipse 99.png" style={{borderRadius: "50%", width:70, height:70}} />
+                  <span className='badgelg'><img src='./assets/Frame 26080342.png' /></span>
+                  </div>
+                  
                 </div>
                 <div className='d-flex d-md-none flex-column align-items-start'>
                   <h6 className='text-start text-bold'>Profile Information</h6>
+                  <div className="notificationmb">
                   <img src="/assets/Ellipse 99.png" style={{marginLeft:130,borderRadius: "50%", width:70, height:70}} />
+                  <span className='badgemb'><img src='./assets/Frame 26080342.png' style={{width:16, height:16}} /></span>
+                  </div>
                 </div>
                 <div>
                 <div className='row mt-4 mb-3'>
