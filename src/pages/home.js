@@ -19,7 +19,7 @@ class Home extends React.Component {
         <style
           dangerouslySetInnerHTML={{
             __html:
-              "\n    .notificationmb {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationmb .badgemb {\n  position: absolute;\n  top: 50px;\n  left: 195px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n  .notificationlg {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationlg .badgelg {\n  position: absolute;\n  top: 45px;\n  left: 70px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n"
+              "\n    .notificationmb {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationmb .badgemb {\n  position: absolute;\n  top: 50px;\n  left: 165px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n  .notificationlg {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationlg .badgelg {\n  position: absolute;\n  top: 45px;\n  left: 70px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n"
           }}
         />
         <style
@@ -38,7 +38,7 @@ class Home extends React.Component {
           <div className='d-md-flex d-none'> 
           <Navbar />
           </div>
-          <div className='vw-100'>
+          <div className='vw-100 vh-100'>
             <div className='d-md-flex d-none flex-row justify-content-end p-3'>
               <div className='d-flex flex-row'>
                 <div className='notificationhd'>
@@ -64,7 +64,7 @@ class Home extends React.Component {
                     className="tabs__radio"
                     name="tabs-example"
                     id="tab1"
-                    defaultChecked=""
+                    defaultChecked="tab1"
                   />
                   <label htmlFor="tab1" className="tabs__label">
                     Accounts
@@ -82,7 +82,7 @@ class Home extends React.Component {
                 <div className='d-flex d-md-none flex-column align-items-start'>
                   <h6 className='text-start text-bold'>Profile Information</h6>
                   <div className="notificationmb">
-                  <img src="/assets/Ellipse 99.png" style={{marginLeft:130,borderRadius: "50%", width:70, height:70}} />
+                  <img src="/assets/Ellipse 99.png" style={{marginLeft:90,borderRadius: "50%", width:70, height:70}} />
                   <span className='badgemb'><img src='./assets/Frame 26080342.png' style={{width:16, height:16}} /></span>
                   </div>
                 </div>
@@ -156,9 +156,10 @@ class Home extends React.Component {
                 <button className='btn w-100' style={{fontWeight:"bold", fontSize:18,backgroundColor: "#233BA9", color:"white"}}>Save Changes</button>
                 <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
                 </div>
-               </div></div>
-                </div>
-                <div className="tabs">
+               </div>
+               </div>
+                
+                
                   <input type="radio" className="tabs__radio" name="tabs-example" id="tab2" />
                   <label htmlFor="tab2" className="tabs__label">
                     Prefrences
@@ -210,13 +211,12 @@ class Home extends React.Component {
               </div>                 
               </div>
                   </div>
-                </div>
-                <div className="tabs">
                   <input type="radio" className="tabs__radio" name="tabs-example" id="tab3" />
                   <label htmlFor="tab3" className="tabs__label">
                     Notifications
                   </label>
-                  <div className="tabs__content"><div className='d-flex flex-column p-3'>
+                  <div className="tabs__content">
+                <div className='d-flex flex-column p-3'>
                 <div className='d-flex flex-row justify-content-between'>
                 <div>
                 <h6  className='text-bold'  style={{fontSize:18}}>Email Notification</h6>
@@ -262,11 +262,8 @@ class Home extends React.Component {
                     <input type="checkbox" />
                     <span className="slider round" />
                   </label>
-                </div>
-                <div>
-                  
-                </div>
-                <div className='d-flex flex-row justify-content-between mt-md-5 mt-sm-5'>
+                </div>                  
+                <div className='d-flex flex-row justify-content-between mt-5'>
                 <div>
                 <h6  className='text-bold'  style={{fontSize:18}}>Push Notification</h6>
                 <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-5}}>Set which notifications you will like to recieve</p>
@@ -320,14 +317,20 @@ class Home extends React.Component {
                 <button className='btn w-100' style={{fontWeight:"bold", fontSize:18,backgroundColor: "#233BA9", color:"white"}}>Save Changes</button>
                 <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
                 </div>
-                </div></div>
                 </div>
-                <div className="tabs">
-                  <input type="radio" className="tabs__radio" name="tabs-example" id="tab4" />
+                </div>  
+                 <input
+                    type="radio"
+                    className="tabs__radio"
+                    name="tabs-example"
+                    id="tab4"
+                    defaultChecked=""
+                  />
                   <label htmlFor="tab4" className="tabs__label">
                     Privacy & Security
                   </label>
-                  <div className="tabs__content"><div className='d-flex flex-column p-3'>
+                  <div className="tabs__content">
+                  <div className='d-flex flex-column p-3'>
                 <div className='d-flex flex-row justify-content-between mt-md-5 mt-sm-5'>
                 <div>
                 <h6  className='text-bold'  style={{fontSize:18}}>Two Factor Authentication</h6>
@@ -373,10 +376,10 @@ class Home extends React.Component {
                 <button className='btn w-100' style={{fontWeight:"bold", fontSize:18,backgroundColor: "#233BA9", color:"white"}}>Save Changes</button>
                 <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
                 </div>
-                </div></div>
+                </div> 
+                    </div>              
                 </div>
-                
-              </div>
+            </div>
 
 
 
