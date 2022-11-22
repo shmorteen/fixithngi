@@ -9,12 +9,19 @@ class Home extends React.Component {
   render() {
     return (
       <>
- <style
+    <style
   dangerouslySetInnerHTML={{
     __html:
-      "\n    .notificationmb {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationmb .badgemb {\n  position: absolute;\n  top: 50px;\n  left: 195px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n  .notificationlg {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationlg .badgelg {\n  position: absolute;\n  top: 45px;\n  left: 70px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n"
+      "\n            .body{\n                margin: 50px;\n                display: flex;\n                flex-direction: row;\n            }\n            .tabs{\n                display: flex;\n                flex-wrap: wrap;\n                max-width: auto;\n\n            }\n            .tabs__label {\n                padding:10px 16px;\n                cursor: pointer;\n            }\n            .tabs__radio {\n                display: none;\n            }\n            .tabs__content {\n                order: 1;\n                width: 100%;\n                display: none;\n            }\n            .tabs__radio:checked+.tabs__label{\n                    color: #233BA9;\n                    border-bottom: 4px solid #233BA9;\n            }\n            .tabs__radio:checked+.tabs__label+.tabs__content {\n                display: initial; \n            }\n        "
   }}
 />
+
+        <style
+          dangerouslySetInnerHTML={{
+            __html:
+              "\n    .notificationmb {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationmb .badgemb {\n  position: absolute;\n  top: 50px;\n  left: 195px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n  .notificationlg {\n  color: white;\n  padding: 15px 26px;\n  position: relative;\n  display: inline-block;\n  border-radius: 2px;\n}\n\n.notificationlg .badgelg {\n  position: absolute;\n  top: 45px;\n  left: 70px;\n  padding: 5px 10px;\n  border-radius: 50%;\n  color: white;\n}\n"
+          }}
+        />
         <style
           dangerouslySetInnerHTML={{
             __html:
@@ -49,7 +56,331 @@ class Home extends React.Component {
               <h5 className='d-md-flex d-none text-start mx-3 text-bold'>Settings</h5>
               <h5 className='d-sm-flex d-md-none text-center mt-3 text-bold'  style={{ fontSize:18}}>Settings</h5>
             </div>
-            <div>
+
+            <div className="p-3 d-flex justify-content-between">
+                <div className="tabs">
+                  <input
+                    type="radio"
+                    className="tabs__radio"
+                    name="tabs-example"
+                    id="tab1"
+                    defaultChecked=""
+                  />
+                  <label htmlFor="tab1" className="tabs__label">
+                    Accounts
+                  </label>
+                  <div className="tabs__content"><div className='d-flex flex-column p-3'>
+                <div className='d-md-flex d-none flex-column'>
+                  <h6 className='text-bold'  style={{fontSize:18}}>Profile Information</h6>
+                  <p className='text-bold' style={{color:"#787A7D", fontSize:14}}>This information will be publicly displayed so be careful what you fill</p>
+                  <div className="notificationlg">
+                  <img src="/assets/Ellipse 99.png" style={{borderRadius: "50%", width:70, height:70}} />
+                  <span className='badgelg'><img src='./assets/Frame 26080342.png' /></span>
+                  </div>
+                  
+                </div>
+                <div className='d-flex d-md-none flex-column align-items-start'>
+                  <h6 className='text-start text-bold'>Profile Information</h6>
+                  <div className="notificationmb">
+                  <img src="/assets/Ellipse 99.png" style={{marginLeft:130,borderRadius: "50%", width:70, height:70}} />
+                  <span className='badgemb'><img src='./assets/Frame 26080342.png' style={{width:16, height:16}} /></span>
+                  </div>
+                </div>
+                <div>
+                <div className='row mt-4 mb-3'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>Username</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='row mb-3'>
+                  <div className='col-md-2 col-sm-12 ' >
+                  <label style={{fontSize:16}}>Full Name</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='row mb-3'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>Email</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='row mb-4'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>Phone Number</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                </div>
+                <div className='mb-3'>
+                  <h6 className='text-bold'  style={{fontSize:18}}>Company Information</h6>
+                  <p className='d-md-flex d-none text-bold' style={{color:"#787A7D", fontSize:14}}>Update your company information here</p>
+                </div>
+                <div className='row mb-3'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>Company Name</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='row mb-3'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>Company Address</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='row mb-3'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>Website URL</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='d-none d-md-flex flex-row justify-content-end'>
+                <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
+                <button className='btn text-bold mx-1' style={{fontWeight:"bold", fontSize:18,color:"white",backgroundColor: "#233BA9"}}>Save Changes</button>
+                </div>
+                <div className='d-flex d-md-none flex-column align-items-center'>
+                <button className='btn w-100' style={{fontWeight:"bold", fontSize:18,backgroundColor: "#233BA9", color:"white"}}>Save Changes</button>
+                <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
+                </div>
+               </div></div>
+                </div>
+                <div className="tabs">
+                  <input type="radio" className="tabs__radio" name="tabs-example" id="tab2" />
+                  <label htmlFor="tab2" className="tabs__label">
+                    Prefrences
+                  </label>
+                  <div className="tabs__content">
+                  <div className='d-flex flex-column p-3'>
+              <div className='row'>
+                <div className='col-md-2 col-sm-12'>
+                <label for="language" style={{fontSize:14, fontWeight:"bold"}}>Preferred Language</label>
+                </div>
+                <div className='col-md-3 col-sm-12'>
+                <select className="form-select" aria-label="Default select example" style={{fontSize:16}}>
+                  <option selected>English</option>
+                  <option value={1}>One</option>
+                  <option value={2}>Two</option>
+                  <option value={3}>Three</option>
+                  </select>
+              </div>
+              </div>
+              <div  className='row mt-3'>
+                <div className='col-md-2 col-sm-12'>
+                  <label  style={{fontSize:14, fontWeight:"bold"}}>Accessibilty</label>
+                </div>
+                <div className='col-md-3 col-sm-12 mb-5'>
+                <label className="main" style={{fontSize: 16}}>
+                  <input type="checkbox" />
+                  <span className="geekmark" />
+                  <span style={{marginLeft: -30, marginTop:-20, color:"#787A7D"}}>I use a screen reader</span>
+                </label>
+                <label className="main" style={{fontSize: 16}}>
+                  <input type="checkbox" />
+                  <span className="geekmark" />
+                  <span style={{marginLeft: -30, marginTop:-20, color:"#787A7D"}}>I use large text</span>
+                </label>
+                <label className="main" style={{fontSize: 16}}>
+                  <input type="checkbox" />
+                  <span className="geekmark" />
+                  <span style={{marginLeft: -30, marginTop:-20, color:"#787A7D"}}>I use large text</span>
+                </label>
+                </div>
+                <div className='d-none d-md-flex flex-row justify-content-end'>
+                <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
+                <button className='btn text-bold mx-1' style={{fontWeight:"bold", fontSize:18,color:"white",backgroundColor: "#233BA9"}}>Save Changes</button>
+                </div>
+                <div className='d-flex d-md-none flex-column align-items-center'>
+                <button className='btn w-100' style={{fontWeight:"bold", fontSize:18,backgroundColor: "#233BA9", color:"white"}}>Save Changes</button>
+                <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
+                </div>
+              </div>                 
+              </div>
+                  </div>
+                </div>
+                <div className="tabs">
+                  <input type="radio" className="tabs__radio" name="tabs-example" id="tab3" />
+                  <label htmlFor="tab3" className="tabs__label">
+                    Notifications
+                  </label>
+                  <div className="tabs__content"><div className='d-flex flex-column p-3'>
+                <div className='d-flex flex-row justify-content-between'>
+                <div>
+                <h6  className='text-bold'  style={{fontSize:18}}>Email Notification</h6>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-5}}>Set which notifications you will like to recieve</p>
+                </div>
+                <button className='btn btn-white' style={{border: "1px solid #233BA9", color:"#233BA9"}}>Enable All</button>
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-3'>
+                <div>
+                <p style={{fontSize:16}}>Complaint Status</p>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-20}}>Get notified about the status of your complaint</p>
+                </div>
+                  <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round" />
+                  </label>
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-3'>
+                <div>
+                <p style={{fontSize:16}}>News & Update</p>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-20}}>Stay updated we bring you updates and promotions</p>
+                </div>
+                  <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round" />
+                  </label>
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-3'>
+                <div>
+                <p style={{fontSize:16}}>Weekly Newsletter</p>
+                </div>
+                  <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round" />
+                  </label>
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-3'>
+                <div>
+                <p style={{fontSize:16}}>Invoice Reciept</p>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-20}}>Get a copy of your invoice reciept sent to your mail</p>
+                </div>
+                  <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round" />
+                  </label>
+                </div>
+                <div>
+                  
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-md-5 mt-sm-5'>
+                <div>
+                <h6  className='text-bold'  style={{fontSize:18}}>Push Notification</h6>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-5}}>Set which notifications you will like to recieve</p>
+                </div>
+                <button className='btn btn-white' style={{border: "1px solid #233BA9", color:"#233BA9"}}>Enable All</button>
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-3'>
+                <div>
+                <p style={{fontSize:16}}>Complaint Status</p>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-20}}>Get notified about the status of your complaint</p>
+                </div>
+                  <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round" />
+                  </label>
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-3'>
+                <div>
+                <p style={{fontSize:16}}>News & Update</p>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-20}}>Stay updated we bring you updates and promotions</p>
+                </div>
+                  <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round" />
+                  </label>
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-3'>
+                <div>
+                <p style={{fontSize:16}}>Weekly Newsletter</p>
+                </div>
+                  <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round" />
+                  </label>
+                </div>
+                <div className='d-flex flex-row justify-content-between mt-3'>
+                <div>
+                <p style={{fontSize:16}}>Invoice Reciept</p>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-20}}>Get a copy of your invoice reciept sent to your mail</p>
+                </div>
+                  <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round" />
+                  </label>
+                </div>
+                <div className='d-none d-md-flex flex-row justify-content-end mt-5'>
+                <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
+                <button className='btn text-bold mx-1' style={{fontWeight:"bold", fontSize:18,color:"white",backgroundColor: "#233BA9"}}>Save Changes</button>
+                </div>
+                <div className='d-flex d-md-none flex-column align-items-center'>
+                <button className='btn w-100' style={{fontWeight:"bold", fontSize:18,backgroundColor: "#233BA9", color:"white"}}>Save Changes</button>
+                <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
+                </div>
+                </div></div>
+                </div>
+                <div className="tabs">
+                  <input type="radio" className="tabs__radio" name="tabs-example" id="tab4" />
+                  <label htmlFor="tab4" className="tabs__label">
+                    Privacy & Security
+                  </label>
+                  <div className="tabs__content"><div className='d-flex flex-column p-3'>
+                <div className='d-flex flex-row justify-content-between mt-md-5 mt-sm-5'>
+                <div>
+                <h6  className='text-bold'  style={{fontSize:18}}>Two Factor Authentication</h6>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-5}}>When enabled your account is protected from from being hacked</p>
+                </div>
+                <button className='btn btn-white' style={{border: "1px solid #233BA9", color:"#233BA9"}}>Enable All</button>
+                </div>
+                <div className='d-flex flex-row justify-content-between'>
+                <div>
+                <h6  className='text-bold'  style={{fontSize:18}}>Password</h6>
+                <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-5}}>To create a new password it must contain a minimun of 12 letters,an uppercase,a number and a character</p>
+                </div>
+                </div>
+                <div className='row mt-4 mb-3'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>Current Password</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='row mt-4 mb-3'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>New Paasword</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='row mt-4 mb-3'>
+                  <div className='col-md-2 col-sm-12' >
+                  <label style={{fontSize:16}}>Confirm Password</label>
+                  </div>
+                  <div className='col-md-10 col-sm-12'>
+                  <input className=' form-control'></input>
+                  </div>
+                </div>
+                <div className='d-none d-md-flex flex-row justify-content-end mt-5'>
+                <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
+                <button className='btn text-bold mx-1' style={{fontWeight:"bold", fontSize:18,color:"white",backgroundColor: "#233BA9"}}>Save Changes</button>
+                </div>
+                <div className='d-flex d-md-none flex-column align-items-center mt-3'>
+                <button className='btn w-100' style={{fontWeight:"bold", fontSize:18,backgroundColor: "#233BA9", color:"white"}}>Save Changes</button>
+                <button className='btn btn-white' style={{fontSize:18,color: "#233BA9"}}>Discard</button>
+                </div>
+                </div></div>
+                </div>
+                
+              </div>
+
+
+
+            {/* <div className='d-md-none d-flex'>
             <Tabs
               defaultActiveKey="account"
               id="uncontrolled-tab-example"
@@ -352,7 +683,7 @@ class Home extends React.Component {
                 </div>
               </Tab>
             </Tabs>
-            </div>
+            </div> */}
           </div>
         </div>
       <Outlet />
