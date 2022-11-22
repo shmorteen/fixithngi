@@ -69,7 +69,7 @@ class Home extends React.Component {
                   <label htmlFor="tab1" className="tabs__label">
                     Accounts
                   </label>
-                  <div className="tabs__content mb-2" style={{borderTop:"2px solid grey"}}><div className='d-flex flex-column p-3'>
+                  <div className="tabs__content mb-2" style={{borderTop:"1px solid grey"}}><div className='d-flex flex-column p-3'>
                 <div className='d-md-flex d-none flex-column'>
                   <h6 className='text-bold'  style={{fontSize:18}}>Profile Information</h6>
                   <p className='text-bold' style={{color:"#787A7D", fontSize:14}}>This information will be publicly displayed so be careful what you fill</p>
@@ -79,7 +79,7 @@ class Home extends React.Component {
                   </div>
                   
                 </div>
-                <div className='d-flex d-md-none flex-column align-items-start'>
+                <div className='d-flex d-md-none flex-column align-items-start mt-3'>
                   <h6 className='text-start text-bold'>Profile Information</h6>
                   <div className="notificationmb">
                   <img src="/assets/Ellipse 99.png" style={{marginLeft:90,borderRadius: "50%", width:70, height:70}} />
@@ -164,7 +164,7 @@ class Home extends React.Component {
                   <label htmlFor="tab2" className="tabs__label">
                     Prefrences
                   </label>
-                  <div className="tabs__content  mb-2" style={{borderTop:"2px solid grey"}}>
+                  <div className="tabs__content  mb-2" style={{borderTop:"1px solid grey"}}>
                   <div className='d-flex flex-column p-3'>
               <div className='row'>
                 <div className='col-md-2 col-sm-12'>
@@ -215,10 +215,10 @@ class Home extends React.Component {
                   <label htmlFor="tab3" className="tabs__label">
                     Notifications
                   </label>
-                  <div className="tabs__content mb-2" style={{borderTop:"2px solid grey"}}>
+                  <div className="tabs__content mb-2" style={{borderTop:"1px solid grey"}}>
                 <div className='d-flex flex-column p-3'>
                 <div className='d-flex flex-row justify-content-between'>
-                <div>
+                <div className='mt-mb-2 mb-sm-2'>
                 <h6  className='text-bold'  style={{fontSize:18}}>Email Notification</h6>
                 <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-5}}>Set which notifications you will like to recieve</p>
                 </div>
@@ -300,7 +300,7 @@ class Home extends React.Component {
                   </label>
                 </div>
                 <div className='d-flex flex-row justify-content-between mt-3'>
-                <div>
+                <div className='mb-5'>
                 <p style={{fontSize:16}}>Invoice Reciept</p>
                 <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-20}}>Get a copy of your invoice reciept sent to your mail</p>
                 </div>
@@ -329,9 +329,9 @@ class Home extends React.Component {
                   <label htmlFor="tab4" className="tabs__label">
                     Privacy & Security
                   </label>
-                  <div className="tabs__content  mb-2" style={{borderTop:"2px solid grey"}}>
+                  <div className="tabs__content  mb-2" style={{borderTop:"1px solid grey"}}>
                   <div className='d-flex flex-column p-3'>
-                <div className='d-flex flex-row justify-content-between mt-md-5 mt-sm-5'>
+                <div className='d-flex flex-row justify-content-between mt-5 mt-5'>
                 <div>
                 <h6  className='text-bold'  style={{fontSize:18}}>Two Factor Authentication</h6>
                 <p className='d-none d-md-flex text-bold' style={{color:"#787A7D", fontSize:14, marginTop:-5}}>When enabled your account is protected from from being hacked</p>
