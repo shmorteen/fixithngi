@@ -57,7 +57,7 @@ class Home extends React.Component {
               <h5 className='d-sm-flex d-md-none text-center mt-3 text-bold'  style={{ fontSize:18}}>Settings</h5>
             </div>
 
-            <div className="p-3 d-flex justify-content-between">
+            <div className="p-3">
                 <div className="tabs">
                   <input
                     type="radio"
